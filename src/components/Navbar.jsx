@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Code2 } from "lucide-react";
+import logo from "../assets/logo.png";
 
 const links = [
   { label: "Services", href: "#services" },
@@ -35,12 +36,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-5 lg:px-8 h-[70px] flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2 group">
-          <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-500 to-brand-700 flex items-center justify-center shadow-glow">
-            <Code2 className="w-5 h-5 text-white" />
-          </div>
-          <span className="font-display font-700 text-xl text-slate-900 tracking-tight">
-            AdIndia360<span className="text-brand-500">.</span>
-          </span>
+          <img src={logo} alt="AdIndia360" className="h-9 w-auto" />
         </a>
 
         {/* Desktop Nav */}
