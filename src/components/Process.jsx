@@ -84,7 +84,7 @@ export default function Process() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.6 }}
-          className="mt-14 bg-gradient-to-r from-brand-50 to-blue-50 border border-brand-100 rounded-2xl p-8 text-center"
+          className="mt-14 bg-gradient-to-r from-brand-50 to-emerald-50 border border-brand-100 rounded-2xl p-8 text-center"
         >
           <p className="text-slate-700 font-medium text-lg mb-4">
             ⚡ Ready to get started? Most projects are delivered in <span className="text-brand-600 font-bold">7–14 business days.</span>

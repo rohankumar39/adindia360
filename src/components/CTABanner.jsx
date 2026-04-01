@@ -52,7 +52,7 @@ export default function CTABanner() {
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
               <a
-                href="https://wa.me/919999999999?text=Hi! I'm interested in getting a website for my business."
+                href="https://wa.me/918004084005?text=Hi! I'm interested in getting a website for my business."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-emerald-500 hover:bg-emerald-600 text-white font-bold rounded-2xl hover:scale-105 transition-all duration-200 text-base shadow-xl"

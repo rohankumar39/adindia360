@@ -129,7 +129,7 @@ export default function Hero() {
                   </div>
                 ))}
               </div>
-              <div className="rounded-2xl bg-gradient-to-br from-brand-50 to-blue-50 p-6 border border-brand-100">
+              <div className="rounded-2xl bg-gradient-to-br from-brand-50 to-emerald-50 p-6 border border-brand-100">
                 <div className="text-sm font-semibold text-brand-700 mb-3">Industries I Serve</div>
                 <div className="flex flex-wrap gap-2">
                   {["🏪 Retail Shops","🍽 Restaurants","🏫 Schools","✈️ Travel","🏗 Startups","💼 Services"].map((t) => (

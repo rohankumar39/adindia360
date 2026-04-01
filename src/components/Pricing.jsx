@@ -91,7 +91,7 @@ export default function Pricing() {
               transition={{ duration: 0.55, delay: i * 0.12 }}
               className={`relative rounded-2xl p-8 border flex flex-col transition-all duration-300 ${
                 plan.highlight
-                  ? "bg-gradient-to-b from-brand-600 to-brand-800 border-brand-600 text-white shadow-[0_20px_60px_rgba(14,165,233,0.3)] md:scale-105"
+                  ? "bg-gradient-to-b from-brand-600 to-brand-800 border-brand-600 text-white shadow-[0_20px_60px_rgba(245,158,11,0.3)] md:scale-105"
                   : "bg-white border-slate-200 shadow-card hover:shadow-hover"
               }`}
             >

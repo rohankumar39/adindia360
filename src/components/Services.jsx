@@ -6,8 +6,8 @@ import { Globe, Smartphone, Search, ShoppingCart, PenTool, RefreshCw } from "luc
 const services = [
   {
     icon: Globe,
-    color: "from-blue-500 to-brand-600",
-    bg: "bg-blue-50",
+    color: "from-brand-500 to-brand-700",
+    bg: "bg-brand-50",
     title: "Business Website",
     desc: "Clean, professional multi-page websites for your business — with contact forms, about, services, and gallery pages.",
     tags: ["5–7 pages", "Contact Form", "Google Maps"],

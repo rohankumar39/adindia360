@@ -4,7 +4,7 @@ import { Send, Phone, Mail, MapPin, MessageCircle, CheckCircle2 } from "lucide-r
 
 const contactInfo = [
   { icon: Phone, label: "Phone / WhatsApp", value: "+91 80040 84005", href: "tel:+918004084005" },
-  { icon: Mail, label: "Email", value: "hello@adindia360.com", href: "mailto:hello@adindia360.com" },
+  { icon: Mail, label: "Email", value: "info.adindia360@gmail.com", href: "mailto:info.adindia360@gmail.com" },
   { icon: MapPin, label: "Location", value: "Delhi, India", href: null },
 ];
 
@@ -87,7 +87,7 @@ export default function Contact() {
               WhatsApp Me Directly
             </a>
 
-            <div className="bg-gradient-to-br from-brand-50 to-blue-50 border border-brand-100 rounded-2xl p-6">
+            <div className="bg-gradient-to-br from-brand-50 to-emerald-50 border border-brand-100 rounded-2xl p-6">
               <p className="text-brand-800 font-semibold text-sm mb-1">⚡ Quick Response Guarantee</p>
               <p className="text-brand-600 text-sm">I respond to every enquiry within 2 hours during business hours (9am–8pm IST).</p>
             </div>
