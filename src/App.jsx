@@ -6,7 +6,6 @@ import Services from "./components/Services";
 import Portfolio from "./components/Portfolio";
 import WhyMe from "./components/WhyMe";
 import Process from "./components/Process";
-import Testimonials from "./components/Testimonials";
 import Pricing from "./components/Pricing";
 import FAQ from "./components/FAQ";
 import CTABanner from "./components/CTABanner";
@@ -25,7 +24,6 @@ export default function App() {
       <Portfolio />
       <WhyMe />
       <Process />
-      <Testimonials />
       <Pricing />
       <FAQ />
       <CTABanner />

@@ -5,7 +5,7 @@ const stats = [
   { value: "120+", label: "Websites Delivered", emoji: "🌐" },
   { value: "8", label: "Industries Served", emoji: "🏢" },
   { value: "98%", label: "Client Satisfaction", emoji: "⭐" },
-  { value: "7–14", label: "Days to Launch", emoji: "🚀" },
+  { value: "7-14", label: "Days to Launch", emoji: "🚀" },
   { value: "30", label: "Days Free Support", emoji: "🛡️" },
 ];
 

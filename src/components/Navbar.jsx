@@ -8,7 +8,6 @@ const links = [
   { label: "Portfolio", href: "#portfolio" },
   { label: "Process", href: "#process" },
   { label: "Pricing", href: "#pricing" },
-  { label: "Testimonials", href: "#testimonials" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -82,12 +81,11 @@ export default function Navbar() {
             transition={{ duration: 0.3 }}
             className="lg:hidden bg-white/98 backdrop-blur-md border-t border-slate-100"
           >
-            <div className="px-5 py-4 flex flex-col gap-2">
+            <div className="px-5 py-4 flex flex-col gap-2" onClick={() => setOpen(false)}>
               {links.map((l) => (
                 <a
                   key={l.label}
                   href={l.href}
-                  onClick={() => setOpen(false)}
                   className="py-2.5 px-3 text-slate-700 font-medium hover:text-brand-600 hover:bg-brand-50 rounded-lg transition-colors"
                 >
                   {l.label}
@@ -95,7 +93,6 @@ export default function Navbar() {
               ))}
               <a
                 href="#contact"
-                onClick={() => setOpen(false)}
                 className="mt-2 py-3 text-center bg-gradient-to-r from-brand-500 to-brand-700 text-white font-semibold rounded-xl"
               >
                 Get Free Quote
