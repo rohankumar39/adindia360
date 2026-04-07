@@ -40,7 +40,7 @@ export default function CTABanner() {
               Ready to Grow Your<br />Business Online?
             </h2>
             <p className="text-brand-200 text-lg lg:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-              Join 120+ local businesses who chose AdIndia360 for their online presence. Get a free consultation today — no obligations, just clarity.
+              Join 20+ local businesses who chose AdIndia360 for their online presence. Get a free consultation today — no obligations, just clarity.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

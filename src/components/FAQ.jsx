@@ -5,7 +5,7 @@ import { ChevronDown } from "lucide-react";
 const faqs = [
   {
     q: "How long does it take to build my website?",
-    a: "Most projects are completed within 7–14 business days, depending on the plan and complexity. I'll give you an exact timeline when we discuss your project.",
+    a: "Most projects are completed within 15–30 business days, depending on the plan and complexity. I'll give you an exact timeline when we discuss your project.",
   },
   {
     q: "Do I need to provide content or photos?",

@@ -8,15 +8,15 @@ const fadeUp = (delay = 0) => ({
 });
 
 const stats = [
-  { value: "120+", label: "Websites Delivered" },
+  { value: "12+", label: "Websites Delivered" },
   { value: "98%", label: "Client Satisfaction" },
   { value: "5★", label: "Average Rating" },
 ];
 
 const badges = [
-  "Delivered in 7–14 Days",
-  "Mobile-First Design",
-  "SEO Ready",
+  "Delivered in 15-30 Days",
+  "Responsive Design",
+  "End to End Service",
 ];
 
 export default function Hero() {
@@ -44,8 +44,8 @@ export default function Hero() {
             <span className="text-sm font-semibold text-slate-700">Professional Web Design for Local Businesses</span>
           </motion.div>
 
-          <motion.h1 
-            {...fadeUp(0.2)} 
+          <motion.h1
+            {...fadeUp(0.2)}
             className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-800 text-slate-900 leading-[1.1] mb-6"
           >
             Your Business{" "}
@@ -63,7 +63,7 @@ export default function Hero() {
           </motion.h1>
 
           <motion.p {...fadeUp(0.35)} className="text-lg lg:text-xl text-slate-500 leading-relaxed mb-8 max-w-lg">
-            I build fast, beautiful, and conversion-focused websites for local businesses — shops, restaurants, schools, startups & more. Get online and start growing.
+            We build fast, beautiful, and conversion-focused websites as well as Web tools for local businesses — shops, restaurants, schools, startups & more. Get online and start growing.
           </motion.p>
 
           <motion.div {...fadeUp(0.45)} className="flex flex-wrap gap-3 mb-8">
@@ -106,7 +106,7 @@ export default function Hero() {
                   <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
                 ))}
               </div>
-              <p className="text-sm text-slate-500"><span className="font-semibold text-slate-800">120+ business owners</span> trust AdIndia360</p>
+              <p className="text-sm text-slate-500"><span className="font-semibold text-slate-800">20+ business owners</span> trust AdIndia360</p>
             </div>
           </motion.div>
         </div>
@@ -132,7 +132,7 @@ export default function Hero() {
               <div className="rounded-2xl bg-gradient-to-br from-brand-50 to-emerald-50 p-6 border border-brand-100">
                 <div className="text-sm font-semibold text-brand-700 mb-3">Industries I Serve</div>
                 <div className="flex flex-wrap gap-2">
-                  {["🏪 Retail Shops","🍽 Restaurants","🏫 Schools","✈️ Travel","🏗 Startups","💼 Services"].map((t) => (
+                  {["🏪 Retail Shops", "🍽 Restaurants", "🏫 Schools", "✈️ Travel", "🏗 Startups", "💼 Services"].map((t) => (
                     <span key={t} className="text-xs bg-white text-slate-700 px-3 py-1.5 rounded-full border border-slate-200 font-medium">{t}</span>
                   ))}
                 </div>
@@ -148,7 +148,7 @@ export default function Hero() {
               <span className="text-2xl">🚀</span>
               <div>
                 <div className="text-xs font-bold text-slate-800">Ready in</div>
-                <div className="text-xs text-brand-600 font-semibold">7–14 Days</div>
+                <div className="text-xs text-brand-600 font-semibold">15–30 Days</div>
               </div>
             </motion.div>
 
@@ -161,7 +161,7 @@ export default function Hero() {
               <span className="text-2xl">💰</span>
               <div>
                 <div className="text-xs font-bold text-slate-800">Starting at</div>
-                <div className="text-xs text-accent-600 font-semibold">₹7,999 only</div>
+                <div className="text-xs text-accent-600 font-semibold">₹15,999 only</div>
               </div>
             </motion.div>
           </div>

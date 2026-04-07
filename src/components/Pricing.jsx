@@ -5,8 +5,8 @@ import { Check, Star } from "lucide-react";
 const plans = [
   {
     name: "Starter",
-    price: "₹7,999",
-    usd: "~$95",
+    price: "₹15,999",
+    usd: "~$190",
     desc: "Perfect for small shops, freelancers & services getting online for the first time.",
     features: [
       "3-page website (Home, About, Contact)",
@@ -22,8 +22,8 @@ const plans = [
   },
   {
     name: "Professional",
-    price: "₹14,999",
-    usd: "~$179",
+    price: "₹24,999",
+    usd: "~$299",
     desc: "Ideal for restaurants, schools, travel agencies, and growing local businesses.",
     features: [
       "Up to 7 pages",
@@ -41,8 +41,8 @@ const plans = [
   },
   {
     name: "E-Commerce",
-    price: "₹29,999",
-    usd: "~$360",
+    price: "₹34,999",
+    usd: "~$420",
     desc: "Full online store for retail shops, fashion brands, or product-based businesses.",
     features: [
       "Everything in Professional",
