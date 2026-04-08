@@ -85,9 +85,9 @@ export default function Footer() {
           <p className="text-slate-500 text-sm">
             © {new Date().getFullYear()} AdIndia360. All rights reserved.
           </p>
-          <p className="text-slate-500 text-sm flex items-center gap-1.5">
+          {/* <p className="text-slate-500 text-sm flex items-center gap-1.5">
             Made with <Heart className="w-3.5 h-3.5 text-red-400 fill-red-400" /> for local businesses in India
-          </p>
+          </p> */}
           <div className="flex gap-5 text-sm">
             <a href="#" className="text-slate-500 hover:text-slate-300 transition-colors">Privacy Policy</a>
             <a href="#" className="text-slate-500 hover:text-slate-300 transition-colors">Terms</a>

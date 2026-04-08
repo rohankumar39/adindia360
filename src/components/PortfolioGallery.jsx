@@ -7,48 +7,70 @@ import restaurantImg from "../assets/portfolio/restaurant.png";
 import restaurant2Img from "../assets/portfolio/restaurant2.png";
 import schoolImg from "../assets/portfolio/school.png";
 import school2Img from "../assets/portfolio/school2.png";
+import school3Img from "../assets/portfolio/school3.png";
+import school4Img from "../assets/portfolio/school4.png";
 import vendorImg from "../assets/portfolio/vendor.png";
 import techImg from "../assets/portfolio/tech.png";
 import tech2Img from "../assets/portfolio/tech2.png";
+
+// Logo imports
+import lebistro from "../assets/clients/lebistro.png";
+import sunrise from "../assets/clients/sunrise.png";
+import techlaunch from "../assets/clients/techlaunch.png";
+import sweetdelights from "../assets/clients/sweetdelights.png";
+import procloud from "../assets/clients/procloud.png";
+import urbandecor from "../assets/clients/urbandecor.png";
 
 const categories = [
   {
     name: "Restaurant",
     desc: "Menus, reservation systems, and mouth-watering galleries.",
     items: [
-      { id: 21, title: "Le Bistro", image: restaurantImg, tag: "Fine Dining" },
-      { id: 22, title: "Spice Route", image: restaurant2Img, tag: "Express" },
-      { id: 23, title: "The Italian Job", image: restaurantImg, tag: "Pizzeria" },
-      { id: 24, title: "Green Bowl", image: restaurant2Img, tag: "Healthy" },
+      { id: 21, title: "Le Bistro", image: restaurantImg, tag: "Fine Dining", url: "https://spice-garden.vercel.app/" },
+      { id: 22, title: "Spice Route", image: restaurant2Img, tag: "Express", url: "https://spice-garden.vercel.app/" },
+      { id: 23, title: "The Italian Job", image: restaurantImg, tag: "Pizzeria", url: "https://spice-garden.vercel.app/" },
+      { id: 24, title: "Green Bowl", image: restaurant2Img, tag: "Healthy", url: "https://spice-garden.vercel.app/" },
     ]
   },
   {
     name: "School & Education",
     desc: "Portals for students, admin dashboards, and enrollment pages.",
     items: [
-      { id: 11, title: "Sunrise Academy", image: schoolImg, tag: "K-12" },
-      { id: 12, title: "Global Tech Institute", image: school2Img, tag: "University" },
-      { id: 13, title: "KinderCare", image: schoolImg, tag: "Preschool" },
-      { id: 14, title: "SkillShare Pro", image: school2Img, tag: "E-Learning" },
+      { id: 11, title: "Sunrise Academy", image: schoolImg, tag: "K-12", url: "https://college-website-demo-ten.vercel.app/" },
+      { id: 12, title: "Global Tech Institute", image: school2Img, tag: "University", url: "https://college-website-demo-ten.vercel.app/" },
+      { id: 13, title: "KinderCare", image: school3Img, tag: "Preschool", url: "https://college-website-demo-ten.vercel.app/" },
+      { id: 14, title: "SkillShare Pro", image: school4Img, tag: "E-Learning", url: "https://library-management-pi-ivory.vercel.app/" },
+    ]
+  },
+  {
+    name: "Brand & Identity",
+    desc: "Custom logos and brand systems designed to leave a lasting impression.",
+    items: [
+      { id: 51, title: "Le Bistro Logo", image: lebistro, tag: "Modern Minimal", url: "#" },
+      { id: 52, title: "Sunrise Academy Logo", image: sunrise, tag: "Academic", url: "#" },
+      { id: 53, title: "TechLaunch Logo", image: techlaunch, tag: "Tech/Future", url: "#" },
+      { id: 54, title: "Sweet Delights Logo", image: sweetdelights, tag: "Playful", url: "#" },
+      { id: 55, title: "ProCloud Logo", image: procloud, tag: "Corporate", url: "#" },
+      { id: 56, title: "Urban Decor Logo", image: urbandecor, tag: "Lifestyle", url: "#" },
     ]
   },
   {
     name: "Tech & SaaS",
     desc: "Landing pages, data visualization and SaaS product showcases.",
     items: [
-      { id: 41, title: "Pro-Cloud SaaS", image: techImg, tag: "Cloud" },
-      { id: 42, title: "NextGen AI", image: tech2Img, tag: "Artificial Intelligence" },
-      { id: 43, title: "DataFlow", image: techImg, tag: "Analytics" },
-      { id: 44, title: "CyberGuard", image: tech2Img, tag: "Security" },
+      { id: 41, title: "Pro-Cloud SaaS", image: techImg, tag: "Cloud", url: "https://www.edgeailocal.com/" },
+      { id: 42, title: "NextGen AI", image: tech2Img, tag: "Artificial Intelligence", url: "https://www.edgeailocal.com/" },
+      { id: 43, title: "DataFlow", image: techImg, tag: "Analytics", url: "https://www.edgeailocal.com/" },
+      { id: 44, title: "CyberGuard", image: tech2Img, tag: "Security", url: "https://www.edgeailocal.com/" },
     ]
   },
   {
     name: "Local Vendors",
     desc: "E-commerce stores and booking systems for local specialists.",
     items: [
-      { id: 31, title: "Sweet Delights", image: vendorImg, tag: "Bakery" },
-      { id: 32, title: "Urban Decor", image: vendorImg, tag: "Furniture" },
-      { id: 33, title: "ProPlumb", image: vendorImg, tag: "Service" },
+      { id: 31, title: "Sweet Delights", image: vendorImg, tag: "Bakery", url: "https://travel-agency-demo-lyart.vercel.app/" },
+      { id: 32, title: "Urban Decor", image: vendorImg, tag: "Furniture", url: "https://travel-agency-demo-lyart.vercel.app/" },
+      { id: 33, title: "ProPlumb", image: vendorImg, tag: "Service", url: "https://travel-agency-demo-lyart.vercel.app/" },
     ]
   }
 ];
@@ -184,9 +206,20 @@ export default function PortfolioGallery({ isOpen, onClose }) {
                             </div>
                             
                             <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-10">
-                              <button className="bg-white text-slate-900 px-8 py-4 rounded-2xl font-bold flex items-center gap-3 shadow-2xl transform translate-y-4 group-hover:translate-y-0 transition-transform">
-                                View Full Project <ExternalLink className="w-5 h-5" />
-                              </button>
+                              {item.url !== "#" ? (
+                                <a 
+                                  href={item.url} 
+                                  target="_blank" 
+                                  rel="noopener noreferrer" 
+                                  className="bg-white text-slate-900 px-8 py-4 rounded-2xl font-bold flex items-center gap-3 shadow-2xl transform translate-y-4 group-hover:translate-y-0 transition-transform hover:bg-brand-600 hover:text-white transition-all"
+                                >
+                                  View Full Project <ExternalLink className="w-5 h-5" />
+                                </a>
+                              ) : (
+                                <div className="bg-white text-slate-900 px-8 py-4 rounded-2xl font-bold flex items-center gap-3 shadow-2xl transform translate-y-4 group-hover:translate-y-0 transition-transform cursor-default">
+                                  Identity Design <Sparkles className="w-5 h-5 text-brand-500" />
+                                </div>
+                              )}
                             </div>
                           </div>
                           
@@ -199,7 +232,9 @@ export default function PortfolioGallery({ isOpen, onClose }) {
                                   <div key={i} className="w-1.5 h-1.5 rounded-full bg-brand-200" />
                                 ))}
                               </div>
-                              <span className="text-slate-400 text-sm font-medium">Design System 2.0</span>
+                              <span className="text-slate-400 text-sm font-medium">
+                                {item.url === "#" ? "Brand Essence" : "Design System 2.0"}
+                              </span>
                             </div>
                           </div>
                         </div>

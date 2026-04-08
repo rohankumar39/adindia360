@@ -2,6 +2,7 @@ import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import StatsBar from "./components/StatsBar";
+import LogoTicker from "./components/LogoTicker";
 import Industries from "./components/Industries";
 import Services from "./components/Services";
 import Portfolio from "./components/Portfolio";
@@ -22,6 +23,7 @@ export default function App() {
       <Navbar onOpenGallery={() => setIsGalleryOpen(true)} />
       <Hero />
       <StatsBar />
+      <LogoTicker />
       <Industries />
       <Services />
       <Portfolio onOpenGallery={() => setIsGalleryOpen(true)} />
