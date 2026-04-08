@@ -12,7 +12,7 @@ const projects = [
     color: "from-orange-400 to-red-500",
     emoji: "🍽️",
     desc: "Full restaurant website with digital menu, reservation system, and food gallery.",
-    url: "https://example.com/project-1",
+    url: "https://project-rk.vercel.app/",
   },
   {
     title: "Sunrise Academy",
@@ -39,7 +39,7 @@ const projects = [
     color: "from-pink-400 to-rose-600",
     emoji: "🛍️",
     desc: "E-commerce clothing store with categories, cart, and UPI/card payments.",
-    url: "https://example.com/project-4",
+    url: "https://project-rk.vercel.app/",
   },
   {
     title: "TechLaunch Startup",
@@ -57,7 +57,7 @@ const projects = [
     color: "from-cyan-400 to-brand-500",
     emoji: "🔧",
     desc: "Home services website with service listing, booking form, and Google reviews.",
-    url: "https://example.com/project-6",
+    url: "https://project-rk.vercel.app/",
   },
   {
     title: "GreenLeaf Café",
@@ -66,7 +66,7 @@ const projects = [
     color: "from-lime-400 to-green-600",
     emoji: "☕",
     desc: "Café website with seasonal menu, loyalty program info, and Swiggy integration.",
-    url: "https://example.com/project-7",
+    url: "https://project-rk.vercel.app/",
   },
   {
     title: "RoyalStay Hotels",
@@ -75,7 +75,7 @@ const projects = [
     color: "from-amber-400 to-orange-600",
     emoji: "🏨",
     desc: "Hotel website with room listings, availability checker, and seasonal offers.",
-    url: "https://example.com/project-8",
+    url: "https://travel-agency-demo-lyart.vercel.app/",
   },
   {
     title: "Library Management",
