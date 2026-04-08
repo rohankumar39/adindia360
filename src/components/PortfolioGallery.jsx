@@ -52,29 +52,29 @@ export default function PortfolioGallery({ isOpen, onClose }) {
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          initial={{ opacity: 0, x: "100%" }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: "100%" }}
-          transition={{ type: "spring", stiffness: 300, damping: 30 }}
-          className="fixed inset-0 z-[1000] bg-white overflow-y-auto"
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.95 }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
+          className="fixed inset-0 z-[1000] bg-white overflow-y-auto overscroll-none"
         >
           {/* Header */}
-          <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-slate-100 px-6 py-4 flex items-center justify-between">
+          <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-2xl border-b border-slate-100 px-4 md:px-6 py-4 flex items-center justify-between shadow-sm">
             <button 
               onClick={onClose}
-              className="flex items-center gap-2 text-slate-500 hover:text-brand-600 transition-all font-semibold group"
+              className="flex items-center gap-2 text-slate-600 hover:text-brand-600 transition-all font-bold px-3 py-2 rounded-xl border border-slate-100 bg-slate-50 active:scale-95"
             >
-              <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
-              Back to Home
+              <ArrowLeft className="w-5 h-5" />
+              <span>Back</span>
             </button>
-            <h2 className="font-display text-2xl font-bold bg-gradient-to-r from-brand-600 to-brand-800 bg-clip-text text-transparent">
-              Work Showcase
+            <h2 className="font-display text-xl md:text-2xl font-bold bg-gradient-to-r from-brand-600 to-brand-800 bg-clip-text text-transparent">
+              Gallery
             </h2>
             <button 
               onClick={onClose}
-              className="p-2 bg-slate-100 hover:bg-slate-200 rounded-full transition-colors"
+              className="p-3 bg-slate-100 hover:bg-slate-200 rounded-xl transition-colors active:scale-95"
             >
-              <X className="w-5 h-5 text-slate-600" />
+              <X className="w-6 h-6 text-slate-700" />
             </button>
           </header>
 
@@ -138,15 +138,14 @@ export default function PortfolioGallery({ isOpen, onClose }) {
                           alt={item.title} 
                           className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                         />
-                        {/* Overlay with details */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/95 via-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-8 md:p-12">
-                          <div className="translate-y-8 group-hover:translate-y-0 transition-all duration-500 ease-out">
-                             <span className="text-brand-400 text-xs font-black uppercase tracking-[0.2em] mb-3 block">{item.category}</span>
-                             <h3 className="text-white text-3xl md:text-4xl font-bold font-display mb-4 leading-tight">{item.title}</h3>
-                             <p className="text-slate-300 text-base md:text-lg mb-8 max-w-md leading-relaxed">{item.description}</p>
+                        <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-100 md:opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-6 md:p-12">
+                          <div className="translate-y-0 md:translate-y-8 group-hover:translate-y-0 transition-all duration-500 ease-out">
+                             <span className="text-brand-400 text-xs font-black uppercase tracking-[0.2em] mb-2 block">{item.category}</span>
+                             <h3 className="text-white text-2xl md:text-4xl font-bold font-display mb-3 leading-tight">{item.title}</h3>
+                             <p className="text-slate-300 text-sm md:text-lg mb-6 max-w-md leading-relaxed hidden sm:block">{item.description}</p>
                              <div className="flex gap-4">
-                               <button className="bg-white text-slate-900 px-8 py-3.5 rounded-xl font-bold flex items-center gap-2 hover:bg-brand-500 hover:text-white transition-all transform active:scale-95 shadow-lg">
-                                 Full Preview <ExternalLink className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                               <button className="bg-white text-slate-900 px-6 py-3 rounded-xl font-bold text-sm flex items-center gap-2 hover:bg-brand-500 hover:text-white transition-all transform active:scale-95 shadow-lg">
+                                 Full Preview <ExternalLink className="w-4 h-4" />
                                </button>
                              </div>
                           </div>

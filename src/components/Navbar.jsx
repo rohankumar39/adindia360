@@ -39,17 +39,20 @@ export default function Navbar({ onOpenGallery }) {
 
         {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center gap-8">
-          {links.map((l) => 
-            l.label === "Portfolio" ? (
-              <button
-                key={l.label}
-                onClick={onOpenGallery}
-                className="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors duration-200 relative group"
-              >
-                {l.label}
-                <span className="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-brand-500 group-hover:w-full transition-all duration-300 rounded-full" />
-              </button>
-            ) : (
+          {links.map((l) => {
+            if (l.label === "Portfolio") {
+              return (
+                <button
+                  key={l.label}
+                  onClick={onOpenGallery}
+                  className="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors duration-200 relative group"
+                >
+                  {l.label}
+                  <span className="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-brand-500 group-hover:w-full transition-all duration-300 rounded-full" />
+                </button>
+              );
+            }
+            return (
               <a
                 key={l.label}
                 href={l.href}
@@ -58,8 +61,8 @@ export default function Navbar({ onOpenGallery }) {
                 {l.label}
                 <span className="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-brand-500 group-hover:w-full transition-all duration-300 rounded-full" />
               </a>
-            )
-          )}
+            );
+          })}
         </nav>
 
         {/* CTA */}
@@ -72,12 +75,11 @@ export default function Navbar({ onOpenGallery }) {
           </a>
         </div>
 
-        {/* Mobile Menu Toggle */}
         <button
-          className="lg:hidden p-2 rounded-xl text-slate-700 hover:bg-slate-100 transition-colors"
+          className="lg:hidden p-2 rounded-xl text-slate-700 hover:bg-slate-100 transition-colors relative z-[60]"
           onClick={() => setOpen(!open)}
         >
-          {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
 
@@ -91,29 +93,33 @@ export default function Navbar({ onOpenGallery }) {
             transition={{ duration: 0.3 }}
             className="lg:hidden bg-white/98 backdrop-blur-md border-t border-slate-100"
           >
-            <div className="px-5 py-4 flex flex-col gap-2" onClick={() => setOpen(false)}>
-              {links.map((l) => 
-                l.label === "Portfolio" ? (
-                  <button
-                    key={l.label}
-                    onClick={() => {
-                      setOpen(false);
-                      onOpenGallery();
-                    }}
-                    className="py-2.5 px-3 text-left text-slate-700 font-medium hover:text-brand-600 hover:bg-brand-50 rounded-lg transition-colors"
-                  >
-                    {l.label}
-                  </button>
-                ) : (
+            <div className="px-5 py-6 flex flex-col gap-3">
+              {links.map((l) => {
+                if (l.label === "Portfolio") {
+                  return (
+                    <button
+                      key={l.label}
+                      onClick={() => {
+                        setOpen(false);
+                        onOpenGallery();
+                      }}
+                      className="py-3 px-4 text-left text-slate-700 font-semibold hover:text-brand-600 hover:bg-brand-50 rounded-xl transition-all"
+                    >
+                      {l.label}
+                    </button>
+                  );
+                }
+                return (
                   <a
                     key={l.label}
                     href={l.href}
-                    className="py-2.5 px-3 text-slate-700 font-medium hover:text-brand-600 hover:bg-brand-50 rounded-lg transition-colors"
+                    onClick={() => setOpen(false)}
+                    className="py-3 px-4 text-slate-700 font-semibold hover:text-brand-600 hover:bg-brand-50 rounded-xl transition-all"
                   >
                     {l.label}
                   </a>
-                )
-              )}
+                );
+              })}
               <a
                 href="#contact"
                 className="mt-2 py-3 text-center bg-gradient-to-r from-brand-500 to-brand-700 text-white font-semibold rounded-xl"
