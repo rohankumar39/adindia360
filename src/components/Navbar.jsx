@@ -20,14 +20,36 @@ export default function Navbar({ onOpenGallery }) {
     return () => window.removeEventListener("scroll", handler);
   }, []);
 
+  const scrollToSection = (e, id) => {
+    e.preventDefault();
+    setOpen(false);
+    
+    // Update hash in URL
+    window.history.pushState(null, null, id);
+
+    setTimeout(() => {
+      const element = document.querySelector(id);
+      if (element) {
+        const offset = 75; // Slightly more than navbar height
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }
+    }, 150); // Small delay to allow menu animation to start
+  };
+
   return (
     <motion.header
       initial={{ y: -80 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-white/95 backdrop-blur-md shadow-[0_2px_24px_rgba(0,0,0,0.08)]"
+        scrolled || open
+          ? "bg-white/95 backdrop-blur-md shadow-[0_2px_24px_rgba(0,0,0,0.08)] border-b border-slate-100"
           : "bg-transparent"
       }`}
     >
@@ -78,6 +100,7 @@ export default function Navbar({ onOpenGallery }) {
         <button
           className="lg:hidden p-2 rounded-xl text-slate-700 hover:bg-slate-100 transition-colors relative z-[60]"
           onClick={() => setOpen(!open)}
+          aria-label="Toggle menu"
         >
           {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
@@ -90,10 +113,10 @@ export default function Navbar({ onOpenGallery }) {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="lg:hidden bg-white/98 backdrop-blur-md border-t border-slate-100"
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="lg:hidden bg-white overflow-hidden border-t border-slate-100"
           >
-            <div className="px-5 py-6 flex flex-col gap-3">
+            <div className="px-5 py-6 flex flex-col gap-1">
               {links.map((l) => {
                 if (l.label === "Portfolio") {
                   return (
@@ -103,7 +126,7 @@ export default function Navbar({ onOpenGallery }) {
                         setOpen(false);
                         onOpenGallery();
                       }}
-                      className="py-3 px-4 text-left text-slate-700 font-semibold hover:text-brand-600 hover:bg-brand-50 rounded-xl transition-all"
+                      className="w-full py-4 px-4 text-left text-slate-700 font-semibold hover:text-brand-600 hover:bg-brand-50 rounded-xl transition-all"
                     >
                       {l.label}
                     </button>
@@ -113,8 +136,8 @@ export default function Navbar({ onOpenGallery }) {
                   <a
                     key={l.label}
                     href={l.href}
-                    onClick={() => setOpen(false)}
-                    className="py-3 px-4 text-slate-700 font-semibold hover:text-brand-600 hover:bg-brand-50 rounded-xl transition-all"
+                    onClick={(e) => scrollToSection(e, l.href)}
+                    className="w-full py-4 px-4 text-slate-700 font-semibold hover:text-brand-600 hover:bg-brand-50 rounded-xl transition-all"
                   >
                     {l.label}
                   </a>
@@ -122,7 +145,8 @@ export default function Navbar({ onOpenGallery }) {
               })}
               <a
                 href="#contact"
-                className="mt-2 py-3 text-center bg-gradient-to-r from-brand-500 to-brand-700 text-white font-semibold rounded-xl"
+                onClick={(e) => scrollToSection(e, "#contact")}
+                className="mt-4 py-4 text-center bg-gradient-to-r from-brand-500 to-brand-700 text-white font-bold rounded-xl shadow-lg shadow-brand-200 active:scale-95 transition-transform"
               >
                 Get Free Quote
               </a>
