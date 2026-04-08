@@ -10,7 +10,7 @@ const links = [
   { label: "Contact", href: "#contact" },
 ];
 
-export default function Navbar() {
+export default function Navbar({ onOpenGallery }) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -39,16 +39,27 @@ export default function Navbar() {
 
         {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center gap-8">
-          {links.map((l) => (
-            <a
-              key={l.label}
-              href={l.href}
-              className="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors duration-200 relative group"
-            >
-              {l.label}
-              <span className="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-brand-500 group-hover:w-full transition-all duration-300 rounded-full" />
-            </a>
-          ))}
+          {links.map((l) => 
+            l.label === "Portfolio" ? (
+              <button
+                key={l.label}
+                onClick={onOpenGallery}
+                className="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors duration-200 relative group"
+              >
+                {l.label}
+                <span className="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-brand-500 group-hover:w-full transition-all duration-300 rounded-full" />
+              </button>
+            ) : (
+              <a
+                key={l.label}
+                href={l.href}
+                className="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors duration-200 relative group"
+              >
+                {l.label}
+                <span className="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-brand-500 group-hover:w-full transition-all duration-300 rounded-full" />
+              </a>
+            )
+          )}
         </nav>
 
         {/* CTA */}
@@ -81,15 +92,28 @@ export default function Navbar() {
             className="lg:hidden bg-white/98 backdrop-blur-md border-t border-slate-100"
           >
             <div className="px-5 py-4 flex flex-col gap-2" onClick={() => setOpen(false)}>
-              {links.map((l) => (
-                <a
-                  key={l.label}
-                  href={l.href}
-                  className="py-2.5 px-3 text-slate-700 font-medium hover:text-brand-600 hover:bg-brand-50 rounded-lg transition-colors"
-                >
-                  {l.label}
-                </a>
-              ))}
+              {links.map((l) => 
+                l.label === "Portfolio" ? (
+                  <button
+                    key={l.label}
+                    onClick={() => {
+                      setOpen(false);
+                      onOpenGallery();
+                    }}
+                    className="py-2.5 px-3 text-left text-slate-700 font-medium hover:text-brand-600 hover:bg-brand-50 rounded-lg transition-colors"
+                  >
+                    {l.label}
+                  </button>
+                ) : (
+                  <a
+                    key={l.label}
+                    href={l.href}
+                    className="py-2.5 px-3 text-slate-700 font-medium hover:text-brand-600 hover:bg-brand-50 rounded-lg transition-colors"
+                  >
+                    {l.label}
+                  </a>
+                )
+              )}
               <a
                 href="#contact"
                 className="mt-2 py-3 text-center bg-gradient-to-r from-brand-500 to-brand-700 text-white font-semibold rounded-xl"

@@ -88,7 +88,7 @@ const projects = [
   },
 ];
 
-export default function Portfolio() {
+export default function Portfolio({ onOpenGallery }) {
   const [active, setActive] = useState("All");
   const [selectedProject, setSelectedProject] = useState(null);
   const ref = useRef(null);
@@ -182,8 +182,15 @@ export default function Portfolio() {
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ delay: 0.6 }}
-          className="text-center mt-12"
+          className="text-center mt-12 flex flex-col items-center gap-6"
         >
+          <button 
+            onClick={onOpenGallery}
+            className="bg-brand-600 text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-glow hover:bg-brand-700 transition-all transform hover:scale-105 flex items-center gap-3"
+          >
+            View Screenshot Gallery
+            <ExternalLink className="w-5 h-5" />
+          </button>
           <a href="#contact" className="group inline-flex items-center gap-2 text-brand-600 font-bold hover:text-brand-700 transition-all text-lg">
             Want something similar? Let's talk 
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
