@@ -22,7 +22,7 @@ const plans = [
   },
   {
     name: "Professional",
-    price: "₹24,999",
+    price: "₹24,999+",
     usd: "~$299",
     desc: "Ideal for restaurants, schools, travel agencies, and growing local businesses.",
     features: [
@@ -41,7 +41,7 @@ const plans = [
   },
   {
     name: "E-Commerce",
-    price: "₹34,999",
+    price: "₹34,999+",
     usd: "~$420",
     desc: "Full online store for retail shops, fashion brands, or product-based businesses.",
     features: [
