@@ -57,7 +57,7 @@ const projects = [
     color: "from-cyan-400 to-brand-500",
     emoji: "🔧",
     desc: "Home services website with service listing, booking form, and Google reviews.",
-    url: "https://project-rk.vercel.app/",
+    url: "https://coaching-demo-bice.vercel.app/",
   },
   {
     title: "GreenLeaf Café",
