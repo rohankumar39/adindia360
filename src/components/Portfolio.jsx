@@ -6,13 +6,13 @@ const categories = ["All", "Restaurant", "School", "Travel", "Retail", "Startup"
 
 const projects = [
   {
-    title: "Spice Garden Restaurant",
+    title: "THE ARTISAN GRILL Restaurant",
     category: "Restaurant",
     tags: ["Menu", "Booking", "Gallery"],
     color: "from-orange-400 to-red-500",
     emoji: "🍽️",
     desc: "Full restaurant website with digital menu, reservation system, and food gallery.",
-    url: "https://project-rk.vercel.app/",
+    url: "https://restaurant-demo-peach.vercel.app/",
   },
   {
     title: "Sunrise Academy",
@@ -66,7 +66,7 @@ const projects = [
     color: "from-lime-400 to-green-600",
     emoji: "☕",
     desc: "Café website with seasonal menu, loyalty program info, and Swiggy integration.",
-    url: "https://project-rk.vercel.app/",
+    url: "https://restaurant-demo-peach.vercel.app/",
   },
   {
     title: "RoyalStay Hotels",

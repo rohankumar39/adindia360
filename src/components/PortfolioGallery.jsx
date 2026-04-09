@@ -26,9 +26,9 @@ const categories = [
     name: "Restaurant",
     desc: "Menus, reservation systems, and mouth-watering galleries.",
     items: [
-      { id: 21, title: "Le Bistro", image: restaurantImg, tag: "Fine Dining", url: "https://college-website-demo-ten.vercel.app/" },
-      { id: 22, title: "Spice Route", image: restaurant2Img, tag: "Express", url: "https://college-website-demo-ten.vercel.app/" },
-      { id: 23, title: "The Italian Job", image: restaurantImg, tag: "Pizzeria", url: "https://college-website-demo-ten.vercel.app/" },
+      { id: 21, title: "Le Bistro", image: restaurantImg, tag: "Fine Dining", url: "https://restaurant-demo-peach.vercel.app/" },
+      { id: 22, title: "Spice Route", image: restaurant2Img, tag: "Express", url: "https://restaurant-demo-peach.vercel.app/" },
+      { id: 23, title: "The Italian Job", image: restaurantImg, tag: "Pizzeria", url: "https://restaurant-demo-peach.vercel.app/" },
       { id: 24, title: "Green Bowl", image: restaurant2Img, tag: "Healthy", url: "https://college-website-demo-ten.vercel.app/" },
     ]
   },
