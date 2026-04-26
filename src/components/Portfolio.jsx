@@ -69,13 +69,13 @@ const projects = [
     url: "https://restaurant-demo-peach.vercel.app/",
   },
   {
-    title: "RoyalStay Hotels",
+    title: "Aravalli Hotels",
     category: "Travel",
     tags: ["Rooms", "Booking", "Offers"],
     color: "from-amber-400 to-orange-600",
     emoji: "🏨",
     desc: "Hotel website with room listings, availability checker, and seasonal offers.",
-    url: "https://travel-agency-demo-lyart.vercel.app/",
+    url: "https://aravali-homes.vercel.app/",
   },
   {
     title: "Library Management",
